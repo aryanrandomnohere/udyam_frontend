@@ -9,7 +9,7 @@ const TestDataPanel = () => {
   
   const testData = {
     aadhaarNumber: "234567890123", // Valid Aadhaar format (12 digits)
-    entrepreneurName: "Rajesh Kumar Singh",  
+    entrepreneurName: "Aryan Rathore",  
     mobileNumber: "9876543210",
     panNumber: "ABCDE1234F", // Valid PAN format
     panName: "Aryan Rathore",
