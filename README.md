@@ -132,4 +132,26 @@ Make sure your backend is deployed (e.g., on Railway) and the `NEXT_PUBLIC_BACKE
 - [ ] Domain configured (optional)
 - [ ] Performance testing completed
 - [ ] Mobile responsiveness tested
-# udyam_frontend
+
+## 🔧 Troubleshooting
+
+### "No Next.js version detected" Error
+
+If you get this error on Vercel:
+
+1. **Check Root Directory**: Ensure Vercel is looking at the correct directory
+2. **Verify package.json**: Make sure `next` is in dependencies (not devDependencies)
+3. **Clean install**: Delete `node_modules` and `package-lock.json`, then run `npm install`
+4. **Build locally first**: Run `npm run build` locally to ensure everything works
+
+### Build Issues
+
+- **TypeScript errors**: Run `npm run type-check` to identify issues
+- **Dependency conflicts**: Try deleting `package-lock.json` and reinstalling
+- **Environment variables**: Ensure `NEXT_PUBLIC_BACKEND_URL` is set in Vercel
+
+### Performance Issues
+
+- Check the `/api/health` endpoint after deployment
+- Monitor build times in Vercel dashboard
+- Use Vercel Analytics for real-world performance data
